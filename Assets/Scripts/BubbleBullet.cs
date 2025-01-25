@@ -1,8 +1,10 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class BubbleBullet : MonoBehaviour
 {
     public string targetTag = "Target";
+    public string MimicTag = "Mimic";
     public Transform spawnLocation;
     public GameObject captureEffect;
     public GameObject failedCaptureEffect;
@@ -20,6 +22,14 @@ public class BubbleBullet : MonoBehaviour
             if (target != null)
             {
                 AttemptCapture(target);
+            }
+        }
+        else if (other.CompareTag(MimicTag))
+        {
+            Stun  mimic = other.GetComponent<Stun>();
+            if (mimic != null)
+            {
+                mimic.getStunned();
             }
         }
     }

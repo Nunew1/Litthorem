@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1987129880796189371}
   - component: {fileID: 180291085565836137}
   - component: {fileID: 8784125828338061419}
-  - component: {fileID: 739965702913595824}
+  - component: {fileID: -7069607189666058184}
   m_Layer: 0
-  m_Name: CreatureLegendary
-  m_TagString: Target
+  m_Name: CreatureLegendary_Mimic
+  m_TagString: Mimic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d174068bca27ef40aec7c37eb491159, type: 2}
+  - {fileID: 2100000, guid: 716691ecdc887944ab45d244a0c27416, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &739965702913595824
+--- !u!114 &-7069607189666058184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2182855294267377021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50fddc7d7bf7a304bb0d4a509164f3a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4580b2d98abd0f742952d2448ec765f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
