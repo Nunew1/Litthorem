@@ -24,6 +24,13 @@ public class Shoot : MonoBehaviour
 
     bool readyToThrow;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         readyToThrow = true;
@@ -54,6 +61,8 @@ public class Shoot : MonoBehaviour
             currentClip--;
 
             Invoke(nameof(ResetThrow), throwCooldown);
+
+            audioManager.PlaySFX(audioManager.Shoot);
 
             //Destroy(objectToThrow, 5f);
         }
