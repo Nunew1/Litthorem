@@ -85,36 +85,7 @@ public class BubbleBullet : MonoBehaviour
 
         Material material = targetshot.planeRenderer.material;
         material.SetTexture("_BaseMap", targetshot.newTexture);
-        Invoke(nameof(DestroyTarget), 1f);
-    }
-
-    private IEnumerator DestroyAfterDelay(GameObject target, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        Debug.Log($"Destroying target: {target.name}");
         Destroy(target);
     }
 
-    private void DestroyTarget(GameObject target)
-    {
-        if (target != null)
-        {
-            Debug.Log($"Destroying target: {target.name}");
-            targetshot.OnCaptured();
-        }
-        else
-        {
-            Debug.LogWarning("Target is null, cannot destroy!");
-        }
-    }
-
-    //private void OnTriggerExit(Collider other)
-    //{
-      //  if (other.gameObject.CompareTag("Target"))
-        //{
-          //  Destroy(other);
-            //Debug.Log("Destroy target");
-        //}
-    //}
 }
