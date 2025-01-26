@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -11,6 +12,7 @@ public class BubbleBullet : MonoBehaviour
     public GameObject failedCaptureEffect;
 
     private Target targetshot;
+    public CompletionListController complist;
 
     [Header("Base Capture Rates by Rarity")]
     [Range(0f, 1f)] public float commonRate = 0.8f;
@@ -71,7 +73,7 @@ public class BubbleBullet : MonoBehaviour
 
     private void CaptureTarget(GameObject target)
     {
-
+        complist = GameObject.FindObjectOfType<CompletionListController>();
         if (captureEffect != null)
         {
             Instantiate(captureEffect, transform.position, Quaternion.identity);
@@ -82,7 +84,7 @@ public class BubbleBullet : MonoBehaviour
             Instantiate(target, spawnLocation.position, Quaternion.identity);
         }
         targetshot = target.GetComponent<Target>();
-
+        complist.OnCreatureCollected(targetshot.prefabName);
         Material material = targetshot.planeRenderer.material;
         material.SetTexture("_BaseMap", targetshot.newTexture);
         Destroy(target);

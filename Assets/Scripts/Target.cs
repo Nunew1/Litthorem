@@ -9,6 +9,7 @@ public enum TargetRarity
 
 public class Target : MonoBehaviour
 {
+    public string prefabName;
     public TargetRarity rarity;
     public Renderer planeRenderer;  // Reference to the plane's renderer
     public Texture newTexture;

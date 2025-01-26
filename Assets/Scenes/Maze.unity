@@ -15195,6 +15195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreatureCommon (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3225012471833585622, guid: 4c42a9dfe47a18a449454a695a497ca1, type: 3}
+      propertyPath: prefabName
+      value: CreatureCommon
+      objectReference: {fileID: 0}
     - target: {fileID: 5702267606071813545, guid: 4c42a9dfe47a18a449454a695a497ca1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1749887
@@ -16286,6 +16290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreatureCommon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3225012471833585622, guid: 4c42a9dfe47a18a449454a695a497ca1, type: 3}
+      propertyPath: prefabName
+      value: CreatureCommon
+      objectReference: {fileID: 0}
     - target: {fileID: 5702267606071813545, guid: 4c42a9dfe47a18a449454a695a497ca1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.9033394
@@ -17324,6 +17332,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2705716176736619829, guid: 4c42a9dfe47a18a449454a695a497ca1, type: 3}
       propertyPath: m_Name
+      value: CreatureCommon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225012471833585622, guid: 4c42a9dfe47a18a449454a695a497ca1, type: 3}
+      propertyPath: prefabName
       value: CreatureCommon
       objectReference: {fileID: 0}
     - target: {fileID: 5702267606071813545, guid: 4c42a9dfe47a18a449454a695a497ca1, type: 3}
@@ -24403,6 +24415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreatureRare
       objectReference: {fileID: 0}
+    - target: {fileID: 4305853441415412200, guid: b27c38433efca82409ee38ac6616fbb0, type: 3}
+      propertyPath: prefabName
+      value: CreatureRare
+      objectReference: {fileID: 0}
     - target: {fileID: 4895698812304525177, guid: b27c38433efca82409ee38ac6616fbb0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.584198
@@ -27507,6 +27523,15 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 08c7dfa168e7c474f889a95eff9927d7, type: 3}
+    - target: {fileID: 1774851881366170453, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_text
+      value: 'Left Click = Shoot
+
+        WASD = Movement
+
+        E = Completion
+        list'
+      objectReference: {fileID: 0}
     - target: {fileID: 4568388780254432197, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -28338,6 +28363,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1750394615}
     m_Modifications:
+    - target: {fileID: 739965702913595824, guid: bac8c36f0dbc57a4b9c50519e9cb5574, type: 3}
+      propertyPath: prefabName
+      value: CreatureLegendary
+      objectReference: {fileID: 0}
     - target: {fileID: 2182855294267377021, guid: bac8c36f0dbc57a4b9c50519e9cb5574, type: 3}
       propertyPath: m_Name
       value: CreatureLegendary
@@ -32008,6 +32037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreatureRare (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4305853441415412200, guid: b27c38433efca82409ee38ac6616fbb0, type: 3}
+      propertyPath: prefabName
+      value: CreatureRare
+      objectReference: {fileID: 0}
     - target: {fileID: 4895698812304525177, guid: b27c38433efca82409ee38ac6616fbb0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.148292
@@ -32499,6 +32532,10 @@ PrefabInstance:
     - target: {fileID: 2264209910373998877, guid: b27c38433efca82409ee38ac6616fbb0, type: 3}
       propertyPath: m_Name
       value: CreatureRare (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305853441415412200, guid: b27c38433efca82409ee38ac6616fbb0, type: 3}
+      propertyPath: prefabName
+      value: CreatureRare
       objectReference: {fileID: 0}
     - target: {fileID: 4895698812304525177, guid: b27c38433efca82409ee38ac6616fbb0, type: 3}
       propertyPath: m_LocalPosition.x

@@ -38,6 +38,8 @@ public class CompletionListController : MonoBehaviour
         SetAllImagesOpacity(normalImages, lowOpacity);
         SetAllImagesOpacity(rareImages, lowOpacity);
         SetAllImagesOpacity(superRareImages, lowOpacity);
+
+        InvokeRepeating("CheckWinCondition", 1f, 5f);
     }
 
     public void CaptureCreature(TargetRarity rarity)
@@ -77,7 +79,7 @@ public class CompletionListController : MonoBehaviour
     {
         switch (type)
         {
-            case "Normal":
+            case "CreatureCommon":
                 if (normalCollected < normalImages.Length)
                 {
                     SetImageOpacity(normalImages[normalCollected], fullOpacity);
@@ -85,7 +87,7 @@ public class CompletionListController : MonoBehaviour
                 }
                 break;
 
-            case "Rare":
+            case "CreatureRare":
                 if (rareCollected < rareImages.Length)
                 {
                     SetImageOpacity(rareImages[rareCollected], fullOpacity);
@@ -93,7 +95,7 @@ public class CompletionListController : MonoBehaviour
                 }
                 break;
 
-            case "SuperRare":
+            case "CreatureLegendary":
                 if (superRareCollected < superRareImages.Length)
                 {
                     SetImageOpacity(superRareImages[superRareCollected], fullOpacity);
