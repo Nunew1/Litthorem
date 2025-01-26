@@ -1,11 +1,16 @@
+using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class BubbleBullet : MonoBehaviour
 {
     public string targetTag = "Target";
+    public string MimicTag = "Mimic";
     public Transform spawnLocation;
     public GameObject captureEffect;
     public GameObject failedCaptureEffect;
+
+    private Target targetshot;
 
     [Header("Base Capture Rates by Rarity")]
     [Range(0f, 1f)] public float commonRate = 0.8f;
@@ -20,6 +25,14 @@ public class BubbleBullet : MonoBehaviour
             if (target != null)
             {
                 AttemptCapture(target);
+            }
+        }
+        else if (other.CompareTag(MimicTag))
+        {
+            Stun  mimic = other.GetComponent<Stun>();
+            if (mimic != null)
+            {
+                mimic.getStunned();
             }
         }
     }
@@ -58,6 +71,7 @@ public class BubbleBullet : MonoBehaviour
 
     private void CaptureTarget(GameObject target)
     {
+
         if (captureEffect != null)
         {
             Instantiate(captureEffect, transform.position, Quaternion.identity);
@@ -67,7 +81,11 @@ public class BubbleBullet : MonoBehaviour
         {
             Instantiate(target, spawnLocation.position, Quaternion.identity);
         }
+        targetshot = target.GetComponent<Target>();
 
+        Material material = targetshot.planeRenderer.material;
+        material.SetTexture("_BaseMap", targetshot.newTexture);
         Destroy(target);
     }
+
 }
