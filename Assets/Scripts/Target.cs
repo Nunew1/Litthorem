@@ -10,9 +10,12 @@ public enum TargetRarity
 public class Target : MonoBehaviour
 {
     public TargetRarity rarity;
+    public Renderer planeRenderer;  // Reference to the plane's renderer
+    public Texture newTexture;
 
     public void OnCaptured()
     {
         Debug.Log(name + " has been captured!");
+        Destroy(gameObject);
     }
 }

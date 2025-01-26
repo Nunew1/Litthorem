@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -8,6 +9,8 @@ public class BubbleBullet : MonoBehaviour
     public Transform spawnLocation;
     public GameObject captureEffect;
     public GameObject failedCaptureEffect;
+
+    private Target targetshot;
 
     [Header("Base Capture Rates by Rarity")]
     [Range(0f, 1f)] public float commonRate = 0.8f;
@@ -68,6 +71,7 @@ public class BubbleBullet : MonoBehaviour
 
     private void CaptureTarget(GameObject target)
     {
+
         if (captureEffect != null)
         {
             Instantiate(captureEffect, transform.position, Quaternion.identity);
@@ -77,7 +81,40 @@ public class BubbleBullet : MonoBehaviour
         {
             Instantiate(target, spawnLocation.position, Quaternion.identity);
         }
+        targetshot = target.GetComponent<Target>();
 
+        Material material = targetshot.planeRenderer.material;
+        material.SetTexture("_BaseMap", targetshot.newTexture);
+        Invoke(nameof(DestroyTarget), 1f);
+    }
+
+    private IEnumerator DestroyAfterDelay(GameObject target, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        Debug.Log($"Destroying target: {target.name}");
         Destroy(target);
     }
+
+    private void DestroyTarget(GameObject target)
+    {
+        if (target != null)
+        {
+            Debug.Log($"Destroying target: {target.name}");
+            targetshot.OnCaptured();
+        }
+        else
+        {
+            Debug.LogWarning("Target is null, cannot destroy!");
+        }
+    }
+
+    //private void OnTriggerExit(Collider other)
+    //{
+      //  if (other.gameObject.CompareTag("Target"))
+        //{
+          //  Destroy(other);
+            //Debug.Log("Destroy target");
+        //}
+    //}
 }
