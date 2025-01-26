@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void Gameplay()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Maze");
     }
 
     public void Credits()
