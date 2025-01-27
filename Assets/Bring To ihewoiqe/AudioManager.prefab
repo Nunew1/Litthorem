@@ -49,6 +49,10 @@ MonoBehaviour:
   musicSource: {fileID: 8247875263297138060}
   SFXSource: {fileID: 8108995260938519111}
   Shoot: {fileID: 8300000, guid: e05d27cd8cbfe7f4caf650017a0f7e24, type: 3}
+  Captured: {fileID: 8300000, guid: 332da9f73b17b4c48a176afd286fbb4b, type: 3}
+  ButtonClick: {fileID: 8300000, guid: f321bba00e4069241b0b788275a0df52, type: 3}
+  Stunned: {fileID: 8300000, guid: 6a8f4d434e63ef74db06efe664bb88d1, type: 3}
+  Reload: {fileID: 8300000, guid: 558d77e3e3decc04daa4d9086ee883b7, type: 3}
 --- !u!1 &5398947449547236259
 GameObject:
   m_ObjectHideFlags: 0

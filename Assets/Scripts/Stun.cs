@@ -11,6 +11,13 @@ public class Stun : MonoBehaviour
 
     private bool isMovementRestricted = false;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [System.Obsolete]
     void Start()
@@ -22,6 +29,7 @@ public class Stun : MonoBehaviour
     public void getStunned()
     {
         StartCoroutine(RestrictMovement(gameObject));
+        audioManager.PlaySFX(audioManager.Stunned);
     }
 
     private IEnumerator RestrictMovement(GameObject mimic)
@@ -47,5 +55,6 @@ public class Stun : MonoBehaviour
         Debug.Log("End Flashbang");
         flash = false;
         Destroy(mimic);
+        
     }
 }

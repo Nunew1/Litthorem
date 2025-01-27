@@ -3,6 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     public void Gameplay()
     {
         SceneManager.LoadScene("Maze");
@@ -16,6 +23,7 @@ public class MainMenu : MonoBehaviour
     public void MainMenuu()
     {
         SceneManager.LoadScene("MainMenu");
+
     }
 
     public void Quit()

@@ -19,6 +19,14 @@ public class BubbleBullet : MonoBehaviour
     [Range(0f, 1f)] public float rareRate = 0.5f;
     [Range(0f, 1f)] public float legendaryRate = 0.2f;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(targetTag))
@@ -54,6 +62,7 @@ public class BubbleBullet : MonoBehaviour
         }
 
         Destroy(gameObject);
+        Debug.Log("The error is here!");
     }
 
     private float GetCaptureRate(TargetRarity rarity)
@@ -73,6 +82,7 @@ public class BubbleBullet : MonoBehaviour
 
     private void CaptureTarget(GameObject target)
     {
+        audioManager.PlaySFX(audioManager.Captured);
         complist = GameObject.FindObjectOfType<CompletionListController>();
         if (captureEffect != null)
         {
