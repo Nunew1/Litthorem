@@ -33,6 +33,7 @@ public class CountDown : MonoBehaviour
 
     void OpenPanel()
     {
+        Cursor.lockState = CursorLockMode.None;
         timeText.text = "";
         panel.SetActive(true);
     }

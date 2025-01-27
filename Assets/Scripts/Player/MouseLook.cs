@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MouseLook : MonoBehaviour
 {
@@ -6,12 +7,24 @@ public class MouseLook : MonoBehaviour
 
     public Transform playerBody;
 
+    Scene scene;
+    string mazescene;
+
     float xRotation = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        scene = SceneManager.GetActiveScene();
+        mazescene = scene.name;
+        if (mazescene == "Maze")
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     // Update is called once per frame
