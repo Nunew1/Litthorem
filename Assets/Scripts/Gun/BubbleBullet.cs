@@ -62,7 +62,6 @@ public class BubbleBullet : MonoBehaviour
         }
 
         Destroy(gameObject);
-        Debug.Log("The error is here!");
     }
 
     private float GetCaptureRate(TargetRarity rarity)

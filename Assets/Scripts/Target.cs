@@ -14,31 +14,31 @@ public class Target : MonoBehaviour
     public Renderer planeRenderer;  // Reference to the plane's renderer
     public Texture newTexture;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            OnCaptured();
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        OnCaptured();
 
-            // Locate the CompletionListController in the scene
-            var completionController = FindObjectOfType<CompletionListController>();
-            if (completionController != null)
-            {
-                completionController.CaptureCreature(rarity); // Call the method
-            }
-            else
-            {
-                Debug.LogError("CompletionListController not found in the scene!");
-            }
+    //        // Locate the CompletionListController in the scene
+    //        var completionController = FindObjectOfType<CompletionListController>();
+    //        if (completionController != null)
+    //        {
+    //            completionController.CaptureCreature(rarity); // Call the method
+    //        }
+    //        else
+    //        {
+    //            Debug.LogError("CompletionListController not found in the scene!");
+    //        }
 
-            Destroy(gameObject); // Remove the creature after capture
-        }
-    }
+    //        Destroy(gameObject); // Remove the creature after capture
+    //    }
+    //}
 
 
-    public void OnCaptured()
-    {
-        Debug.Log(name + " has been captured!");
-        Destroy(gameObject);
-    }
+    //public void OnCaptured()
+    //{
+    //    Debug.Log(name + " has been captured!");
+    //    Destroy(gameObject);
+    //}
 }

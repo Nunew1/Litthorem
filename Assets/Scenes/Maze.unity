@@ -950,6 +950,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3748737065197155534, guid: 833bd9695ccf58043865c0cdb8625582, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8337081541866775317, guid: 833bd9695ccf58043865c0cdb8625582, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.081
@@ -31970,14 +31974,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 94211382591806496, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 945340028425194800, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 920807027}
+    - target: {fileID: 945340028425194800, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270416195577540785, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: minimap
+      value: 
+      objectReference: {fileID: 1477576882}
+    - target: {fileID: 3289053971418389909, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 292.17004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058454982474880639, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 325
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407854053999296182, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4736270178152468367, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 920807027}
+    - target: {fileID: 4736270178152468367, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Gameplay
+      objectReference: {fileID: 0}
     - target: {fileID: 5148175951354342730, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: m_Name
       value: UIUX
@@ -32066,6 +32098,10 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 1275987055}
+    - target: {fileID: 8696928931175146086, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: m_text
+      value: ' E= Objective list'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

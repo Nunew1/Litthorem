@@ -10,9 +10,13 @@ public class CountDown : MonoBehaviour
     [SerializeField] Image timeImage;
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] float duration, currentTime;
+
+    private PlayerMovement mvP1;
+    public GameObject minimap;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        mvP1 = GameObject.FindObjectOfType<PlayerMovement>();
         panel.SetActive(false);
         currentTime = duration;
         timeText.text = currentTime.ToString();
@@ -33,6 +37,8 @@ public class CountDown : MonoBehaviour
 
     void OpenPanel()
     {
+        minimap.SetActive(false);
+        mvP1.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         timeText.text = "";
         panel.SetActive(true);
