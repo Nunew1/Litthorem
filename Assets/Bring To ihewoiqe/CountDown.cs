@@ -13,6 +13,8 @@ public class CountDown : MonoBehaviour
 
     private PlayerMovement mvP1;
     public GameObject minimap;
+
+    public TextMeshProUGUI MissMessage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,5 +44,21 @@ public class CountDown : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         timeText.text = "";
         panel.SetActive(true);
+    }
+
+    public void Missed()
+    {
+        StartCoroutine(MissCapture(1f, MissMessage));
+    }
+
+    private IEnumerator MissCapture(float t, TextMeshProUGUI i)
+    {
+        i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
+        yield return new WaitForSeconds(1f);
+        while (i.color.a > 0.0f)
+        {
+            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
+            yield return null;
+        }
     }
 }

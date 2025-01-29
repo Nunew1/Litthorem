@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -11,6 +12,7 @@ public class BubbleBullet : MonoBehaviour
     public GameObject captureEffect;
     public GameObject failedCaptureEffect;
 
+    private CountDown cd;
     private Target targetshot;
     public CompletionListController complist;
 
@@ -62,6 +64,9 @@ public class BubbleBullet : MonoBehaviour
         }
         else
         {
+            cd = GameObject.FindObjectOfType<CountDown>();
+            cd.Missed();
+
             Debug.Log(target.name + " (" + target.rarity + ") failed to capture!");
         }
 
