@@ -45,6 +45,10 @@ public class BubbleBullet : MonoBehaviour
                 mimic.getStunned();
             }
         }
+        else if (other.CompareTag("Barrier"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void AttemptCapture(Target target)

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Target
   - Mimic
+  - Audio
+  - Barrier
   layers:
   - Default
   - TransparentFX
