@@ -31506,6 +31506,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1477576882}
     - target: {fileID: 3270416195577540785, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
+      propertyPath: duration
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270416195577540785, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: MissMessage
       value: 
       objectReference: {fileID: 758012663}
@@ -31551,11 +31555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5317747535029356177, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000010133
+      value: -395
       objectReference: {fileID: 0}
     - target: {fileID: 5317747535029356177, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 87.877
+      value: 373
       objectReference: {fileID: 0}
     - target: {fileID: 5819412021120648484, guid: 6b99cd4331bf85247b9fdb6718e07202, type: 3}
       propertyPath: m_fontColor.g
