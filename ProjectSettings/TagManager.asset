@@ -8,11 +8,12 @@ TagManager:
   - Mimic
   - Audio
   - Barrier
+  - Particles
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particles
   - Water
   - UI
   - 
